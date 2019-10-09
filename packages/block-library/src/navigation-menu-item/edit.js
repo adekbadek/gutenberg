@@ -41,6 +41,8 @@ function NavigationMenuItemEdit( {
 	isParentOfSelectedBlock,
 	setAttributes,
 } ) {
+	const { styles } = attributes;
+
 	const plainTextRef = useRef( null );
 	const onEditLableClicked = useCallback(
 		( onClose ) => () => {
@@ -84,7 +86,9 @@ function NavigationMenuItemEdit( {
 			</div>
 		);
 	} else {
-		content = attributes.label;
+		content = <span style={ styles }>
+			{ attributes.label }
+		</span>;
 	}
 	return (
 		<Fragment>

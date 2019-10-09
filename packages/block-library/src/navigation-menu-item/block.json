@@ -21,6 +21,12 @@
 		"opensInNewTab": {
 			"type": "boolean",
 			"default": false
-		}
+		},
+	  	"styles": {
+			"type": "object",
+			"default": {
+			  "color": "red"
+			}
+	 	}
 	}
 }
